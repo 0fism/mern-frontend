@@ -11,14 +11,19 @@ import envRoute from "./routes/env.route.js";
 
 const app = express();
 
-// app.use(cors({origin:process.env.CLIENT_URL, credentials: true}));
 app.use(cors(
     {
-        origin: ["https://mern-client-inky.vercel.app"],
+        origin:process.env.CLIENT_URL, 
         methods: ["POST", "GET"],
-        credentials: true
-    }
-));
+        credentials: true}
+        ));
+// app.use(cors(
+//     {
+//         origin: ["https://mern-client-inky.vercel.app"],
+//         methods: ["POST", "GET"],
+//         credentials: true
+//     }
+// ));
 app.use(express.json())
 app.use(cookieParser())
 
