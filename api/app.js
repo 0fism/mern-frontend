@@ -31,6 +31,6 @@ app.use("/api/chats", chatRoute);
 app.use("/api/env", envRoute);
 
 
-app.listen(8800, () => {
+app.listen(3001, () => {
     console.log("Server is running on http://localhost:8800");
 })
